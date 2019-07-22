@@ -15,19 +15,6 @@ pipeline {
    }
   }
 
-   stage('IOS Build') {
-   steps {
-      sh 'ionic cordova build ios --release'
-     } 
-  }
-
-
-   stage('Publish iOS') {
-      steps {
-       echo "Publish iOS Action"
-    }
-   }
-
    stage('Publish Android') {
      steps {
     echo "Publish Android API Action"

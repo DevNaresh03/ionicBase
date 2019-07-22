@@ -9,6 +9,11 @@ pipeline {
          sh 'npm install'
       }
    }
+  stage('Android Build') {
+   steps {
+      sh 'ionic cordova build android --release'
+   }
+  }
 
    stage('IOS Build') {
    steps {
@@ -16,25 +21,6 @@ pipeline {
      } 
   }
 
-   stage('Android Build') {
-   steps {
-      sh 'ionic cordova build android --release'
-   }
-  }
-
-   stage('APK Sign') {
-   steps {
-      sh 'jarsigner -storepass your_password -keystore keys/yourkey.keystore platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk nameApp'
-   }
-   }
-
-   stage('Stage Web Build') {
-      steps {
-        sh 'npm run build --prod'
-    }
-  }
-
-   
 
    stage('Publish iOS') {
       steps {

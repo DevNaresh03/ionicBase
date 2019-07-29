@@ -14,9 +14,9 @@ pipeline {
      sh 'env'
     // credentialsId and url must also be set
     echo 'iOS: Setup iOS Env. variables'
-    sh '/usr/bin/security list-keychains -s /Users/jenkins_slave/Library/Keychains/login.keychain'
-    sh '/usr/bin/security default-keychain -d user -s /Users/jenkins_slave/Library/Keychains/login.keychain'
-    sh '/usr/bin/security unlock-keychain -p $KEYCHAIN_PASSWORD /Users/jenkins_slave/Library/Keychains/login.keychain'
+    sh '/usr/bin/security list-keychains -s /Users/NareshBojja⁩/Library/Keychains/login.keychain'
+    sh '/usr/bin/security default-keychain -d user -s /Users/NareshBojja⁩/Library/Keychains/login.keychain'
+    sh '/usr/bin/security unlock-keychain -p $KEYCHAIN_PASSWORD /Users/NareshBojja⁩/Library/Keychains/login.keychain'
 
     echo 'iOS: Starting Install'
     sh 'npm install'

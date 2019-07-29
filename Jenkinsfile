@@ -9,6 +9,7 @@ pipeline {
          sh 'npm install'
       }
    }
+ 
 
  stage('Android Build') {
    steps {
@@ -16,13 +17,14 @@ pipeline {
       sh 'ionic cordova build android'
    }
   }
- stage('Android Build') {
+
+  stage('ios Build') {
    steps {
       sh 'ionic cordova platform add ios'
       sh 'ionic cordova build ios'
    }
   }
- 
+
   
 
 

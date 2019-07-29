@@ -13,7 +13,6 @@ pipeline {
 
  stage('Android Build') {
    steps {
-     sh 'npm rebuild node-sass'
       sh 'ionic cordova platform add android'
       sh 'ionic cordova build android'
    }

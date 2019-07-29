@@ -21,6 +21,7 @@ pipeline {
 
   stage('ios Build') {
    steps {
+      sh 'ionic cordova platform rm ios'
       sh 'ionic cordova platform add ios'
       sh 'ionic cordova build ios'
    }

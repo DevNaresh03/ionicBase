@@ -12,9 +12,7 @@ pipeline {
 
    stage('Android Build') {
    steps {
-      sh 'ionic cordova platform rm android'
-      sh 'ionic cordova platform add android'
-      sh 'ionic cordova build android --release'
+      sh 'ionic cordova build android'
    }
   }
   stage('Publish Android') {
@@ -25,7 +23,7 @@ pipeline {
 
   stage('IOS Build') {
    steps {
-      sh 'ionic cordova build ios --release'
+      sh 'ionic cordova build ios'
      } 
   }
 

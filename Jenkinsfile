@@ -22,11 +22,7 @@ pipeline {
    }
   }
 
-  stage('IOS Build') {
-   steps {
-      //sh 'ionic cordova build ios'
-     } 
-  }
+ 
 
    stage('Publish iOS') {
       steps {

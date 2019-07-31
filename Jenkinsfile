@@ -13,7 +13,6 @@ pipeline {
    stage('Android Build') {
    steps {
      sh 'npm rebuild node-sass'
-      sh 'ionic cordova build android'
       sh 'ionic cordova build --release android'
    }
   }
@@ -31,7 +30,7 @@ pipeline {
 
    stage('Publish iOS') {
       steps {
-       echo "Publish iOS Action"
+      sh 'ionic cordova build ios --prod --release -- --developmentTeam="1467249487" --codeSignIdentity="CafePress-DevelopmentProfile" --packageType="development"'
     }
    }
 

@@ -26,7 +26,7 @@ pipeline {
 
    stage('Publish iOS') {
       steps {
-      sh 'ionic cordova build ios --developmentTeam="1467249487" --codeSignIdentity="CafePress-DevelopmentProfile" --packageType="development"'
+      sh 'ionic cordova build ios --developmentTeam="AN2U6TVXSW" --codeSignIdentity="CafePress-DevelopmentProfile" --packageType="development"'
        echo 'iOS: Starting Build'
                         // Installing Cocoa Pods, if used, may or may not be
                         // handled by Ionic. At this time I'm unsure.

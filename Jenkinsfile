@@ -13,6 +13,8 @@ pipeline {
    stage('iOS Build') {
       steps {
       sh 'ionic cordova build ios --prod --release -- --developmentTeam="AN2U6TVXSW" --codeSignIdentity="iPhone Developer" --packageType="app-store"' 
+      sh 'xcodebuild -project platforms/ios/MyApp.xcodeproj -scheme MyApp clean archive -archivePath MyApp.xcarchive'
+      sh 'xcodebuild -exportArchive -archivePath MyApp.xcarchive -exportOptionsPlist exportOptions.plist -exportPath .'
    }
    }
 

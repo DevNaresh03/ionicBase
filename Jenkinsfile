@@ -11,7 +11,9 @@ pipeline {
    }
 
    stage('iOS Build') {
+      steps {
       sh 'ionic cordova build ios --prod --release -- --developmentTeam="AN2U6TVXSW" --codeSignIdentity="iPhone Developer" --packageType="app-store"' 
+   }
    }
 
 //    stage('Android Build') {

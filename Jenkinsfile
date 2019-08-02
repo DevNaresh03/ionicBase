@@ -7,9 +7,9 @@ pipeline {
       stage('NPM Setup') {
       steps {
           sh 'env'
-           sh '/usr/bin/security list-keychains -s /Users/Shared/Jenkins/Library/Keychains/login.keychain'
-           sh '/usr/bin/security default-keychain -d user -s /Users/Shared/Jenkins/Library/Keychains/login.keychain'
-           sh '/usr/bin/security unlock-keychain -p Vidya@415 /Users/Shared/Jenkins/Library/Keychains/login.keychain'
+         //   sh '/usr/bin/security list-keychains -s /Users/Shared/Jenkins/Library/Keychains/login.keychain'
+         //   sh '/usr/bin/security default-keychain -d user -s /Users/Shared/Jenkins/Library/Keychains/login.keychain'
+         //   sh '/usr/bin/security unlock-keychain -p Vidya@415 /Users/Shared/Jenkins/Library/Keychains/login.keychain'
 
          sh 'npm install'
       }

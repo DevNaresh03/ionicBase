@@ -22,10 +22,11 @@ pipeline {
       sh 'ionic cordova build ios --developmentTeam="AN2U6TVXSW" --provisioningProfile="4134a6f1-c23d-4afd-aa7f-cbff6c690099" --codeSignIdentity="iPhone Developer"' 
       //sh 'ionic cordova build ios --prod --release --developmentTeam="AN2U6TVXSW" --provisioningProfile="1a313fff-609a-4686-a731-9524f0a40504" --codeSignIdentity="iPhone Developer" --packageType="app-store"' 
       //sh 'xcodebuild -project platforms/ios/MyApp.xcodeproj -scheme MyApp archive -archivePath MyApp.xcarchive'
-      sh 'xcodebuild  -project platforms/ios/MyApp.xcodeproj -scheme MyApp archive -archivePath platforms/ios/MyApp.xcarchive'
+      //xcodebuild -scheme MyApp -archivePath builds/MyApp.xcarchive archive
+      sh 'xcodebuild -scheme MyApp  -archivePath MyApp.xcarchive archive'
       //xcodebuild -exportArchive -archivePath ${WORKSPACE}/build/YourProject.xcarchive -exportPath ${JENKINS_HOME}/jobs/${JOB_NAME}/builds/${BUILD_NUMBER}/archive -exportOptionsPlist ${WORKSPACE}/ExportOptions.plist
 
-      sh 'xcodebuild -exportArchive  -archivePath platforms/ios/MyApp.xcarchive -exportPath /Users/Shared/Jenkins/jobs/archive -exportOptionsPlist -exportPath /Users/Shared/Jenkins/Home/workspace/IONICPIPELINE_DEMO/platforms/ios/ExportOptions.plist' 
+      //sh 'xcodebuild -exportArchive  -archivePath platforms/ios/MyApp.xcarchive -exportPath /Users/Shared/Jenkins/jobs/archive -exportOptionsPlist -exportPath /Users/Shared/Jenkins/Home/workspace/IONICPIPELINE_DEMO/platforms/ios/ExportOptions.plist' 
       //xcodebuild -exportArchive -archivePath  <ProjectName>.xcarchive -exportOptionsPlist  <ProjectName>/exportOptions.plist -exportPath  <ProjectName>.ipa  
       
    }      

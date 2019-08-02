@@ -25,7 +25,7 @@ pipeline {
       sh 'xcodebuild  -project platforms/ios/MyApp.xcodeproj -scheme MyApp archive -archivePath platforms/ios/MyApp.xcarchive'
       //xcodebuild -exportArchive -archivePath ${WORKSPACE}/build/YourProject.xcarchive -exportPath ${JENKINS_HOME}/jobs/${JOB_NAME}/builds/${BUILD_NUMBER}/archive -exportOptionsPlist ${WORKSPACE}/ExportOptions.plist
 
-      sh 'xcodebuild -exportArchive  -archivePath platforms/ios/MyApp.xcarchive -exportPath /Users/Shared/Jenkins/jobs/archive -exportOptionsPlist -exportPath platforms/ios/ExportOptions.plist' 
+      sh 'xcodebuild -exportArchive  -archivePath platforms/ios/MyApp.xcarchive -exportPath /Users/Shared/Jenkins/jobs/archive -exportOptionsPlist -exportPath /Users/Shared/Jenkins/Home/workspace/IONICPIPELINE_DEMO/platforms/ios/ExportOptions.plist' 
       //xcodebuild -exportArchive -archivePath  <ProjectName>.xcarchive -exportOptionsPlist  <ProjectName>/exportOptions.plist -exportPath  <ProjectName>.ipa  
       
    }      

@@ -14,7 +14,7 @@ pipeline {
       steps {
       //sh 'ionic cordova build ios --developmentTeam="AN2U6TVXSW" --provisioningProfile="1a313fff-609a-4686-a731-9524f0a40504" --codeSignIdentity="iPhone Developer"' 
 
-      sh 'ionic cordova build ios --prod --release --developmentTeam="AN2U6TVXSW" --provisioningProfile="1a313fff-609a-4686-a731-9524f0a40504" --codeSignIdentity="iPhone Developer" --packageType="ad-hoc"' 
+      sh 'ionic cordova build ios --prod --release --developmentTeam="AN2U6TVXSW" --provisioningProfile="1a313fff-609a-4686-a731-9524f0a40504" --codeSignIdentity="iPhone Developer" --packageType="app-store"' 
       sh 'xcodebuild -project platforms/ios/MyApp.xcodeproj -scheme MyApp clean archive -archivePath MyApp.xcarchive'
       sh 'xcodebuild -exportArchive -archivePath MyApp.xcarchive -exportOptionsPlist exportOptions.plist -exportPath .'
    }
